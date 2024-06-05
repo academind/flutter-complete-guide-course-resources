@@ -42,6 +42,17 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
         ),
       );
     }
+    else if (identifier == 'meals') {
+      final availableMeals = ref.watch(filteredMealsProvider);
+      await Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => MealsScreen(
+            title: 'Available Meals',
+            meals: availableMeals,
+          ),
+        ),
+      );
+    }
   }
 
   @override
