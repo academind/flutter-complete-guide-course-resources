@@ -1,5 +1,9 @@
 const functions = require("firebase-functions/v2/firestore");
 const admin = require("firebase-admin");
+
+// When encountering an error after using this code
+// follow the link that should be shown in the error message
+// Enable the registry (on the page after following the link) and try again
  
 admin.initializeApp();
 exports.myFunction = functions.onDocumentCreated(
